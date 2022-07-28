@@ -1,4 +1,4 @@
-package service;
+package strategy;
 
 import model.Car;
 
@@ -9,6 +9,6 @@ public class CarTestTurnRight implements CarTest {
 
     @Override
     public void move(Car car) {
-        System.out.println(car.getModel() + " " + car.getColor() + " virou à direita...");
+        System.out.println(car.getModel() + " " + car.getColor() + " virou à direita...\n");
     }
 }

@@ -1,9 +1,10 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import service.CarTest;
+import strategy.CarTest;
 
 /**
  * Car
@@ -36,10 +37,6 @@ public class Car {
         this.color = color;
     }
 
-    public void addOptional(String optional) {
-        this.optional.add(optional);
-    }
-
     public List<String> getOptional() {
         return optional;
     }
@@ -54,6 +51,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return ("Carro: " + model + "\nCor: " + color + "\nOpcionais: " + optional + "\n");
+        Collections.sort(optional);
+        return ("Modelo: " + model + "\nCor: " + color + "\nOpcionais: " + optional + "\n");
     }
 }
